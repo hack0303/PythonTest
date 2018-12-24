@@ -82,6 +82,14 @@ def testdocstrings():
     #注意字符串换行的问题，自己可以测试
     return  """hehe
 haha"""
+#function annotation
+def testAnnotation(a:str,b:str)->str:
+    anno=testAnnotation.__annotations__
+    print("annotation")
+    for x in anno:
+        print("key:"+x+","+str(anno[x]))
+    print('argument:',a,b)
+    return a+'and'+b
 if __name__ == '__main__':
     func01(10)
     func02(10)
@@ -150,4 +158,6 @@ if __name__ == '__main__':
     print(pairs)
     print(testdocstrings())
     print('-'*40)
+    #可以理解成强类型声明
+    testAnnotation('a','b')
     pass
