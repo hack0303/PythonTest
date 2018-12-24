@@ -78,6 +78,10 @@ def testabc_multiple(**args):
         print("key:"+x+":"+args[x])
 def testlambda(n):
     return lambda x:x+n
+def testdocstrings():
+    #注意字符串换行的问题，自己可以测试
+    return  """hehe
+haha"""
 if __name__ == '__main__':
     func01(10)
     func02(10)
@@ -144,4 +148,6 @@ if __name__ == '__main__':
     pairs=[(1,'one'),(2,'two'),(3,'three'),(4,'four')]
     pairs.sort(key=lambda pair:pair[1])
     print(pairs)
+    print(testdocstrings())
+    print('-'*40)
     pass
